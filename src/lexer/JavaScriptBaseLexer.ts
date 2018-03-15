@@ -1,7 +1,7 @@
 import { JavaScriptLexer } from './JavaScriptLexer';
 import { Lexer, Token, CharStream } from "antlr4ts";
 
-export abstract class JavaScriptBaseLexer extends Lexer {
+export default abstract class JavaScriptBaseLexer extends Lexer {
     
     constructor(input:CharStream) {
         super(input);
@@ -43,7 +43,8 @@ export abstract class JavaScriptBaseLexer extends Lexer {
             this.useStrictCurrent = this.scopeStrictModes.length > 0 && lastElement ? true : this.useStrictDefault;
             this.scopeStrictModes.push(this.useStrictCurrent);
         } else if (next.type === JavaScriptLexer.CloseBrace) {
-            this.useStrictCurrent = this.scopeStrictModes.length > 0 ? this.scopeStrictModes.pop() : this.useStrictDefault;
+            let output = this.scopeStrictModes.length > 0 ? this.scopeStrictModes.pop() : this.useStrictDefault;
+            this.useStrictCurrent = output === undefined ? false : output;
         } else if (next.type === JavaScriptLexer.StringLiteral &&
                 (this.lastToken === null || this.lastToken.type === JavaScriptLexer.OpenBrace) && 
                 next.text && (next.text.substring(1, next.text.length - 1)) === "use strict") {
@@ -94,8 +95,8 @@ export abstract class JavaScriptBaseLexer extends Lexer {
         }
     }
     
-    private scopeStrictModes:Array<boolean|undefined>;
+    private scopeStrictModes:Array<boolean>;
     private lastToken:Token|null;
-    private useStrictDefault:boolean|undefined;
-    private useStrictCurrent:boolean|undefined;
+    private useStrictDefault:boolean;
+    private useStrictCurrent:boolean;
 }

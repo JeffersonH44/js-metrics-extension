@@ -13,6 +13,7 @@ import { Vocabulary } from 'antlr4ts/Vocabulary';
 import { VocabularyImpl } from 'antlr4ts/VocabularyImpl';
 
 import * as Utils from 'antlr4ts/misc/Utils';
+import JavaScriptBaseLexer from './JavaScriptBaseLexer';
 
 
 export class JavaScriptLexer extends JavaScriptBaseLexer {
@@ -264,77 +265,77 @@ export class JavaScriptLexer extends JavaScriptBaseLexer {
 	private RegularExpressionLiteral_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 0:
-			return RegexPossible();
+			return this.RegexPossible();
 		}
 		return true;
 	}
 	private OctalIntegerLiteral_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 1:
-			return !IsSrictMode();
+			return !this.IsSrictMode();
 		}
 		return true;
 	}
 	private Implements_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 2:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Let_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 3:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Private_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 4:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Public_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 5:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Interface_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 6:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Package_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 7:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Protected_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 8:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Static_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 9:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
 	private Yield_sempred(_localctx: RuleContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 10:
-			return IsSrictMode();
+			return this.IsSrictMode();
 		}
 		return true;
 	}
