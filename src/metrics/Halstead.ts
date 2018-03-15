@@ -102,6 +102,23 @@ export default class HalsteadMetrics {
         return (this.totalOperands + this.totalOperators) * Math.log2(this.uniqueOperands + this.uniqueOperators);
     }
 
+    getDifficulty(): number {
+        return (this.uniqueOperators / 2) * (this.totalOperands / this.uniqueOperands);
+    }
+
+    getEffort(): number {
+        return this.getVolume() * this.getDifficulty();
+    }
+
+    getTimeToImplement(): number {
+        return this.getEffort() / 18;
+    }
+
+    getBugsDelivered(): number {
+        return Math.pow(this.getEffort(), 2/3) / 3000;
+    }
+
+
     private totalOperators: number;
     private totalOperands: number;
     private uniqueOperators: number;
