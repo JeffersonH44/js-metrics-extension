@@ -70,7 +70,7 @@ export default abstract class JavaScriptBaseLexer extends Lexer {
      */
     protected RegexPossible() {
                                        
-        if (this.lastToken == null) {
+        if (this.lastToken === null) {
             // No token has been produced yet: at the start of the input,
             // no division is possible, so a regex literal _is_ possible.
             return true;
