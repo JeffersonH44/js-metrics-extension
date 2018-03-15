@@ -4,7 +4,7 @@
 import { ATN } from 'antlr4ts/atn/ATN';
 import { ATNDeserializer } from 'antlr4ts/atn/ATNDeserializer';
 import { CharStream } from 'antlr4ts/CharStream';
-import { Lexer } from 'antlr4ts/Lexer';
+// import { Lexer } from 'antlr4ts/Lexer';
 import { LexerATNSimulator } from 'antlr4ts/atn/LexerATNSimulator';
 import { NotNull } from 'antlr4ts/Decorators';
 import { Override } from 'antlr4ts/Decorators';
@@ -340,7 +340,7 @@ export class JavaScriptLexer extends JavaScriptBaseLexer {
 		return true;
 	}
 
-	private static readonly _serializedATNSegments: number = 2;
+	// private static readonly _serializedATNSegments: number = 2;
 	private static readonly _serializedATNSegment0: string =
 		"\x03\uAF6F\u8320\u479D\uB75C\u4880\u1605\u191C\uAB37\x02p\u040F\b\x01"+
 		"\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06"+

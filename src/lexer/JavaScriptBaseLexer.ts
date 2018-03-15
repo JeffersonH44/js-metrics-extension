@@ -1,5 +1,6 @@
 import { JavaScriptLexer } from './JavaScriptLexer';
 import { Lexer, Token, CharStream } from "antlr4ts";
+import { Override } from 'antlr4ts/Decorators';
 
 export default abstract class JavaScriptBaseLexer extends Lexer {
     
@@ -33,7 +34,8 @@ export default abstract class JavaScriptBaseLexer extends Lexer {
      *
      * @return the next token from the character stream.
      */
-    public nextToken() {
+    @Override
+    public nextToken() : Token {
         let next:Token = super.nextToken();
 
         let size = this.scopeStrictModes.length;

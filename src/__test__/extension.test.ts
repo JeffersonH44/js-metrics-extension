@@ -1,10 +1,14 @@
 import countTokens from "../lexer/countTokens";
 
-describe("example test", () => {
+describe("Test count tokens", () => {
 
     // Defines a Mocha unit test
-    test("Something 1", () => {
-        console.log(countTokens("const a = 1;"));
-        expect(42).toBe(42);
+    test("Main test", () => {
+        let code = `
+            "use strict";
+            var dsal = 10;
+        `;
+
+        console.log(countTokens(code).map(elem => elem.text));
     });
 });
