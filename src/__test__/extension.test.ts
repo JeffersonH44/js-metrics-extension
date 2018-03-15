@@ -1,4 +1,5 @@
 import countTokens from "../parser/countTokens";
+import Halstead from "../metrics/Halstead";
 
 describe("Test count tokens", () => {
     test("Main test", () => {
@@ -7,6 +8,8 @@ describe("Test count tokens", () => {
             var dsal = 10;
         `;
 
-        console.log(countTokens(code));
+        let countedTokens = countTokens(code);
+        let hasltead = new Halstead(countedTokens);
+        console.log(hasltead.getVolume());
     });
 });

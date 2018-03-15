@@ -1,5 +1,6 @@
 import { JavaScriptLexer } from "./JavaScriptLexer";
-import { ANTLRInputStream, CommonTokenStream, Token } from 'antlr4ts';
+import { ANTLRInputStream,  Token } from 'antlr4ts';
+import TokenCounter from '../utils/TokenCounter';
 
 function getTokens(lexer:JavaScriptLexer) : Array<Token> {
     let tokens:Array<Token> = [];
@@ -13,25 +14,30 @@ function getTokens(lexer:JavaScriptLexer) : Array<Token> {
     return tokens;
 }
 
-function addElement(operators:Map<number, number>, key:number): void {
+function addElement(operators:Map<string, TokenCounter>, token: Token): void {
+    let key:string = token.text ? token.text : "";
     let value = operators.get(key);
+
     if(value !== undefined) {
-        operators.set(key, value + 1);
+        value.count++;
     } else {
-        operators.set(key, 1);
+        operators.set(key, {
+            token: token,
+            count: 1
+        });
     }
 }
 
-function countElements(tokens: Array<Token>): Map<number, number> {
-    let operators = new Map<number, number>();
+function countElements(tokens: Array<Token>): Map<string, TokenCounter> {
+    let operators = new Map<string, TokenCounter>();
     tokens.forEach(element => {
-        addElement(operators, element.type);
+        addElement(operators, element);
     });
 
     return operators;
 }
 
-export default function countTokens(text:string) : Map<number, number> {
+export default function countTokens(text:string) : Map<string, TokenCounter> {
     let inputStream = new ANTLRInputStream(text);
     let lexer = new JavaScriptLexer(inputStream);
     let tokens = getTokens(lexer);
