@@ -13,7 +13,7 @@ import { Vocabulary } from 'antlr4ts/Vocabulary';
 import { VocabularyImpl } from 'antlr4ts/VocabularyImpl';
 
 import * as Utils from 'antlr4ts/misc/Utils';
-import JavaScriptBaseLexer from "./JavaScriptBaseLexer";
+import JavaScriptBaseLexer from './JavaScriptBaseLexer';
 
 export class JavaScriptLexer extends JavaScriptBaseLexer {
 	public static readonly RegularExpressionLiteral=1;

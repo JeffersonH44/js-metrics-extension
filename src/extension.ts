@@ -3,6 +3,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import countTokens from "./parser/countTokens";
+import countFors from './parser/countFors';
 import Halstead from './metrics/Halstead';
 
 // this method is called when your extension is activated
@@ -26,7 +27,9 @@ export function activate(context: vscode.ExtensionContext) {
         }
         
         let text = editor.document.getText();
+        console.log("hello world");
         let tokens = countTokens(text);
+        let fors = countFors(text);
         let halsteadMetrics = new Halstead(tokens);
 
         let toShow = [
