@@ -4143,10 +4143,10 @@ export class JavaScriptParser extends JavaScriptBaseParser {
 	private iterationStatement_sempred(_localctx: IterationStatementContext, predIndex: number): boolean {
 		switch (predIndex) {
 		case 1:
-			return p("of");
+			return this.p("of");
 
 		case 2:
-			return p("of");
+			return this.p("of");
 		}
 		return true;
 	}
@@ -4238,13 +4238,13 @@ export class JavaScriptParser extends JavaScriptBaseParser {
 			return this.precpred(this._ctx, 35);
 
 		case 26:
-			return notLineTerminator();
+			return this.notLineTerminator();
 
 		case 27:
 			return this.precpred(this._ctx, 34);
 
 		case 28:
-			return notLineTerminator();
+			return this.notLineTerminator();
 
 		case 29:
 			return this.precpred(this._ctx, 9);

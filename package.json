@@ -5,7 +5,7 @@
     "version": "0.0.1",
     "publisher": "jeffersonh44",
     "engines": {
-        "vscode": "^1.21.0"
+        "vscode": "^1.23.1"
     },
     "categories": [
         "Other"
@@ -19,6 +19,11 @@
             {
                 "command": "extension.halstead",
                 "title": "Halstead metrics"
+            },
+            {
+                "command": "catCoding.start",
+                "title": "Start new cat coding session",
+                "category": "Cat coding"
             }
         ]
     },
@@ -45,16 +50,16 @@
         "compile-parser": "antlr4ts -lib ./src/parser/ ./src/parser/JavaScriptLexer.g4 ./src/parser/JavaScriptParser.g4"
     },
     "devDependencies": {
-        "@types/jest": "^22.2.0",
-        "@types/node": "^7.0.43",
-        "jest": "^22.4.2",
-        "ts-jest": "^22.4.1",
-        "tslint": "^5.8.0",
-        "typescript": "^2.6.1",
-        "vscode": "^1.1.6"
+        "@types/jest": "^22.2.3",
+        "@types/node": "^7.0.65",
+        "jest": "^22.4.4",
+        "ts-jest": "^22.4.6",
+        "tslint": "^5.10.0",
+        "typescript": "^2.8.3"
     },
     "dependencies": {
         "antlr4ts": "^0.4.1-alpha.0",
-        "antlr4ts-cli": "^0.4.0-alpha.4"
+        "antlr4ts-cli": "^0.4.0-canary.37504efa",
+        "vscode": "*"
     }
 }

@@ -20,14 +20,12 @@ export default class JavaScriptCompleteParser extends JavaScriptParser {
         let localCtx = super.functionDeclaration();
         let functionName:string = localCtx.Identifier().text;
         this.stats[functionName] = new Array<number>(JavaScriptCompleteParser.SIZE);
-        console.log();
         return localCtx;
     }
 
     @Override
     public iterationStatement(): IterationStatementContext {
         let localCtx = super.iterationStatement();
-        console.log("test");
         this.countFor++;
 
         return localCtx;
