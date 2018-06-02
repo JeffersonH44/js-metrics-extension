@@ -11,7 +11,8 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.halstead"
+        "onCommand:extension.halstead",
+        "onCommand:catCoding.start"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -47,19 +48,67 @@
         "watch": "tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "jest",
-        "compile-parser": "antlr4ts -lib ./src/parser/ ./src/parser/JavaScriptLexer.g4 ./src/parser/JavaScriptParser.g4"
+        "compile-parser": "antlr4ts -lib ./src/parser/ ./src/parser/JavaScriptLexer.g4 ./src/parser/JavaScriptParser.g4",
+        "cp-barrankchart-dist": "cp -r ./node_modules/vizabi-barrankchart/build/* ./out/view",
+        "cp-bubblechart-dist": "cp -r ./node_modules/vizabi-bubblechart/build/* ./out/view",
+        "cp-bubblemap-dist": "cp -r ./node_modules/vizabi-bubblemap/build/* ./out/view",
+        "cp-linechart-dist": "cp -r ./node_modules/vizabi-linechart/build/* ./out/view",
+        "cp-mountainchart-dist": "cp -r ./node_modules/vizabi-mountainchart/build/* ./out/view",
+        "cp-barrankchart-src": "cp -r ./node_modules/vizabi-barrankchart/build/* ./out/view",
+        "cp-bubblechart-src": "cp -r ./node_modules/vizabi-bubblechart/build/* ./out/view",
+        "cp-bubblemap-src": "cp -r ./node_modules/vizabi-bubblemap/build/* ./out/view",
+        "cp-linechart-src": "cp -r ./node_modules/vizabi-linechart/build/* ./out/view",
+        "cp-mountainchart-src": "cp -r ./node_modules/vizabi-mountainchart/build/* ./out/view",
+        "demo.build": "ng build -prod && cp -r ./node_modules/vizabi/build/* ./out/view && npm run cp-barrankchart-dist && npm run cp-bubblechart-dist && npm run cp-bubblemap-dist && npm run cp-linechart-dist && npm run cp-mountainchart-dist && cp ./node_modules/vizabi-ddfcsv-reader/dist/vizabi-ddfcsv-reader.js ./out/view"
     },
     "devDependencies": {
+        "@angular-devkit/core": "0.0.29",
+        "@angular/cli": "1.6.5",
+        "@angular/common": "5.2.7",
+        "@angular/compiler": "5.2.7",
+        "@angular/compiler-cli": "5.2.7",
+        "@angular/core": "5.2.7",
+        "@angular/forms": "5.2.7",
+        "@angular/http": "5.2.7",
+        "@angular/language-service": "5.2.7",
+        "@angular/platform-browser": "5.2.7",
+        "@angular/platform-browser-dynamic": "5.2.7",
+        "@angular/router": "5.2.7",
+        "@angular/tsc-wrapped": "4.4.6",
+        "@types/jasmine": "^2.8.8",
         "@types/jest": "^22.2.3",
         "@types/node": "^7.0.65",
+        "@types/webpack": "^4.4.0",
+        "ajv": "^6.5.0",
+        "jasmine": "^3.1.0",
         "jest": "^22.4.4",
+        "ngx-bootstrap": "2.0.2",
+        "markdown-loader": "2.0.2",
         "ts-jest": "^22.4.6",
         "tslint": "^5.10.0",
-        "typescript": "^2.8.3"
+        "typescript": "^2.8.3",
+        "wallaby-webpack": "^3.9.9",
+        "vizabi-ddfcsv-reader": "2.0.2",
+        "vizabi-config-systema_globalis": "2.0.0",
+        "html-loader": "0.5.5",
+        "ts-helpers": "1.1.2",
+        "classlist-polyfill": "1.2.0"
     },
     "dependencies": {
+        "@angular/common": "^5.2.7",
+        "@angular/core": "^5.2.7",
         "antlr4ts": "^0.4.1-alpha.0",
         "antlr4ts-cli": "^0.4.0-canary.37504efa",
-        "vscode": "*"
+        "ng2-vizabi": "^4.0.9",
+        "rxjs": "^5.5.11",
+        "urlon": "^2.0.1",
+        "vizabi": "^0.33.3-0",
+        "vizabi-barrankchart": "^2.2.1",
+        "vizabi-bubblechart": "^2.1.2",
+        "vizabi-bubblemap": "^2.1.1",
+        "vizabi-linechart": "^2.1.1",
+        "vizabi-mountainchart": "^2.1.1",
+        "vscode": "*",
+        "zone.js": "^0.8.26"
     }
 }
