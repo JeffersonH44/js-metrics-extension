@@ -1,0 +1,165 @@
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--entities--filename.csv",
+  "data": {
+    "concept": "filename",
+    "line": 2,
+    "value": "test"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--entities--filename.csv",
+  "data": {
+    "concept": "filename",
+    "line": 3,
+    "value": "hi"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 2,
+    "value": "test"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--entities--filename.csv",
+  "data": {
+    "concept": "filename",
+    "line": 4,
+    "value": "hello"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 3,
+    "value": "test"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 4,
+    "value": "test"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 5,
+    "value": "hi"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 6,
+    "value": "hi"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 7,
+    "value": "hello"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 8,
+    "value": "hello"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},
+{
+  "id": "DATA_POINT_UNEXPECTED_ENTITY_VALUE",
+  "type": "Datapoint refers to a missing or a misspelled entity.",
+  "howToFix": "Check that the entity ID listed in details is present in the entity file and is spelled correctly.",
+  "path": "/home/jefferson/WebstormProjects/js-metrics-extension/src/view/ddf-js/ddf--datapoints--halstead.csv",
+  "data": {
+    "concept": "filename",
+    "line": 9,
+    "value": "hello"
+  },
+  "isWarning": false,
+  "tags": [
+    "DATAPOINT"
+  ]
+},

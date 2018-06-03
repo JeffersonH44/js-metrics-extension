@@ -1,0 +1,14 @@
+concept,concept_type,description,name,name_catalog,name_short,scales,tags
+description,string,,Description,,,,_none
+name,string,,Name,,,"[""ordinal""]",_none
+name_catalog,string,,Catalog Name,,,,_none
+name_short,string,,Name Short,,,,_none
+scales,string,,Scales,,,,_none
+tags,string,,Tags,,,,_none
+tag_name,string,,Tag name,,,,_none
+commit_number,time,,Commit Number,,,"[""interval""]",_root
+commit_name,string,,Commit message,,,,commit_name
+parent,string,,Tag parent,,,,_none
+halstead,measure,Halstead metric test,Halstead metric,Halstead,Halstead metric,"[""linear"", ""log""]",test_metrics
+filename,entity_domain,Filename,Filename,Filename,file,,_none
+path,string,file path for the file,filepath,filepath,filepath,,_none

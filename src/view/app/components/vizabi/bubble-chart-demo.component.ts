@@ -43,10 +43,10 @@ export class BubbleChartDemoComponent {
       id: 'en',
       filePath: `${startPath}translation/`
     };
-    console.log(`hi! ${__dirname}`);
     this.modelHash = hashPos >= 0 ? location.href.substring(hashPos + 1) : '';
     this.chartType = 'BubbleChart';
     this.stopUrlRedirect = true;
+    console.log("model", this.model);
   }
 
   loadAdditionalData() {
@@ -57,7 +57,7 @@ export class BubbleChartDemoComponent {
       },
       {
         reader: 'csv',
-        path: `${startPath}//extra-data/basic-indicators.csv`
+        path: `${startPath}/extra-data/basic-indicators.csv`
       }
     ];
   }

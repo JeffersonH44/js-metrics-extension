@@ -9,6 +9,7 @@
       "assets": [
         "assets",
         "ddf",
+        "ddf-js",
         "extra-data",
         "translation",
         "vizabi.js",
