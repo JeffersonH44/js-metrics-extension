@@ -1,0 +1,11 @@
+files,commit,halstead,test1,test2,test3,package
+/src/hello.js,1,4,35,12,34,pack1
+/src/hello.js,2,5,35,12,34,pack1
+/src/hello.js,3,5,23,23,34,pack1
+/src/test.js,1,3,25,11,23,pack1
+/src/test.js,2,3,45,11,23,pack1
+/src/test.js,3,3,45,13,23,pack1
+/src/hi.js,1,7,12,34,22,pack2
+/src/hi.js,2,7,12,34,22,pack2
+/src/hi.js,3,7,12,34,22,pack2
+/src/hi.js,4,8,15,38,25,pack2

@@ -72,16 +72,21 @@ export function activate(context: vscode.ExtensionContext) {
 function getWebviewContent(context: vscode.ExtensionContext) {
     const viewFolder = 'out/view';
     const HTMLPath = path.resolve(context.extensionPath, viewFolder, 'index.html');
-    const regExp = /assets|vizabi|barrankchart|bubblechart|bubblemap|linechart|mountainchart|inline|main/gi;
+    const regExp = /libs\/[assets|vizabi|barrankchart|bubblechart|bubblemap|linechart|mountainchart|inline|main]/gi;
     console.log(HTMLPath);
-    const HTMLContent = fs.readFileSync(HTMLPath, 'utf-8');
+    var HTMLContent = fs.readFileSync(HTMLPath, 'utf-8');
+    var toReplace = replaceMethod(context, viewFolder);
 
-    return HTMLContent.replace(regExp, function(x) {
+    return HTMLContent.replace(regExp, toReplace).replace("config.js", toReplace);
+}
+
+function replaceMethod(context: vscode.ExtensionContext, viewFolder: string) {
+    return (x: string) => {
         var onDiskPath = vscode.Uri.file(path.join(context.extensionPath, viewFolder, x));
         return onDiskPath.with({
             scheme: 'vscode-resource'
         });
-    });
+    };
 }
 
 // this method is called when your extension is deactivated
