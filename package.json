@@ -12,7 +12,8 @@
     ],
     "activationEvents": [
         "onCommand:extension.halstead",
-        "onCommand:catCoding.start"
+        "onCommand:catCoding.start",
+        "onCommand:analyseRepo.start"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -25,6 +26,11 @@
                 "command": "catCoding.start",
                 "title": "Start new cat coding session",
                 "category": "Cat coding"
+            },
+            {
+                "command": "analyseRepo.start",
+                "title": "Full repository analysis",
+                "category": "Repository Analysis"
             }
         ]
     },
@@ -65,6 +71,8 @@
     "dependencies": {
         "antlr4ts": "^0.4.1-alpha.0",
         "antlr4ts-cli": "^0.4.0-canary.37504efa",
+        "fast-glob": "^2.2.2",
+        "simple-git": "^1.95.1",
         "vscode": "*",
         "zone.js": "^0.8.26"
     }
