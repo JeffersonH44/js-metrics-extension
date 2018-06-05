@@ -1,23 +1,52 @@
 export default class MeasuresCounter {
     
-    constructor(path:string, pack:string, startLine:number, endLine:number, commit:number) {
-        this.path = path;
-        this.pack = pack;
-        this.startLine = startLine;
-        this.endLine = endLine;
+    constructor(commit:number) {
         this.commit = commit;
     }
 
-    get getPack():string {
-        return this.pack;
+    get getName():string|undefined {
+        return this.name;
     }
 
-    public countFor() {
+    set setName(name:string) {
+        this.name = name;
+    }
+
+    set setPath(path:string) {
+        this.path = path;
+    }
+
+    set setStartLine(startLine:number) {
+        this.startLine = startLine;
+    }
+    
+    set setEndLine(endLine:number) {
+        this.endLine = endLine;
+    }
+
+    public countFor(): void {
         this.fors++;
     }
 
-    public countIf() {
+    public countIf(): void {
         this.ifs++;
+    }
+
+    public add(other: MeasuresCounter): void {
+        let otherOperators = Array.from(other.uniqueOperators);
+        for(var i = 0; i < otherOperators.length; ++i) {
+            this.countOperator(otherOperators[i]);
+        }
+
+        let otherOperands = Array.from(other.uniqueOperands);
+        for(var i = 0; i < otherOperands.length; ++i) {
+            this.countOperands(otherOperands[i]);
+        }
+
+        this.ifs += other.ifs;
+        this.fors += other.fors;
+        this.operands += (other.operands - otherOperands.length);
+        this.operators += (other.operators - otherOperators.length);
     }
 
     public countOperator(operator: string): void {
@@ -31,13 +60,21 @@ export default class MeasuresCounter {
     }
 
     public toString(): string {
+        if(!this.path || !this.name || !this.startLine || !this.endLine) {
+            throw new RangeError(`Path established: ${this.path}, name established: ${this.name}, (${this.startLine}:${this.endLine})`);
+        }
+
         return [this.path, this.commit, this.LOC(), this.volume(), 
                 this.difficulty(), this.effort(), this.timeToUnderstand(),
-                this.bugsDelivered(), this.cyclomaticComplexity(), this.pack]
+                this.bugsDelivered(), this.cyclomaticComplexity(), this.name]
             .join(',');
     }
 
     private LOC() {
+        if(this.endLine === undefined || this.startLine === undefined) {
+            throw new RangeError("error on LOC");
+        }
+
         return this.endLine - this.startLine;
     }
 
@@ -73,9 +110,9 @@ export default class MeasuresCounter {
     private operands:number = 0;
     private fors:number = 0;
     private ifs:number = 0;
-    private path:string;
-    private pack:string;
-    private startLine:number;
-    private endLine:number;
+    private path:string|undefined = undefined;
+    private name:string|undefined = undefined;
+    private startLine:number|undefined = undefined;
+    private endLine:number|undefined = undefined;
     private commit:number;
 }

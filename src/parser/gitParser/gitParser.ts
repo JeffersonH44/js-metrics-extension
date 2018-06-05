@@ -1,4 +1,5 @@
 import * as Git from 'simple-git/promise';
+import countFors from "../countFors";
 var glob = require('fast-glob');
 
 export default async function gitParser(path: string) {
@@ -13,8 +14,12 @@ export default async function gitParser(path: string) {
         var currentCommit = commits[i].hash;
         await git.checkout(currentCommit)
           .then(() => {
-            console.log(glob.sync([`${path}/src/**/*.js`, `!${path}/src/__tests__`]));
+            var files = glob.sync([`${path}/src/**/*.js`, `!${path}/src/__tests__`]);
+            for(var j = 0; j < files.length; ++j) {
+              countFors(files[j], i);
+            }
           });
       }
+      await git.checkout("master");
     });
 }

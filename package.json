@@ -20,7 +20,8 @@
         "commands": [
             {
                 "command": "extension.halstead",
-                "title": "Halstead metrics"
+                "title": "Halstead metrics",
+                "category": "Repository Analysis"
             },
             {
                 "command": "catCoding.start",
